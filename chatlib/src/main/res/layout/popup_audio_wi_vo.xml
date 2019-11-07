@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_voice_popup">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rc_audio_state_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_volume_cancel" />
+
+        <TextView
+            android:id="@+id/rc_audio_timer"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="41dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="41dp"
+            android:layout_marginBottom="11dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="70dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rc_audio_state_text"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/corner_voice_shape"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</FrameLayout>

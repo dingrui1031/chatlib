@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.basecare.ding192.widget.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_cc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/divider"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_chat_voice"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_chat_voice" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <EditText
+                        android:id="@+id/et_chat_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rect_gray_white_stroke_4dp_shape"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColorHint="@color/gray_aa"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="vertical" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_chat_speak"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rect_gray_white_stroke_4dp_shape"
+                    android:gravity="center"
+                    android:text="按住 说话"
+                    android:textColor="@color/black_33"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/iv_chat_more"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_chat_more" />
+
+                <TextView
+                    android:id="@+id/tv_chat_send"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rect_theme_4dp_shape"
+                    android:gravity="center"
+                    android:text="发送"
+                    android:textColor="@color/white_ff"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="300"
+            app:el_expanded="false"
+            app:el_parallax="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_cc" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="100dp">
+
+                    <TextView
+                        android:id="@+id/tv_take_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:drawableTop="@drawable/ic_chat_take_photo"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:text="拍照"
+                        android:textColor="@color/gray_99"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:drawableTop="@drawable/ic_chat_chose_picture"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:text="相册"
+                        android:textColor="@color/gray_99"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_take_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:drawableTop="@drawable/ic_chat_take_photo"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:text="视频"
+                        android:textColor="@color/gray_99"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:drawableTop="@drawable/ic_chat_chose_file"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:text="报告"
+                        android:textColor="@color/gray_99"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
