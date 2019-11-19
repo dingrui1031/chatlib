@@ -18,6 +18,7 @@ import okhttp3.RequestBody;
  */
 
 public class ChatModel extends BaseModel implements ChatContract.Model {
+
     @Override
     public Observable<String> getData(int channelId, String uuid, int limit, int firstId) {
         return RetrofitUtils.getChatService().getData(channelId, uuid, limit, firstId);

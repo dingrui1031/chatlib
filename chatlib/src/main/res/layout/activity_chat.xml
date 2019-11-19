@@ -190,7 +190,8 @@
                         android:gravity="center"
                         android:text="报告"
                         android:textColor="@color/gray_99"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:visibility="gone" />
 
                 </LinearLayout>
 

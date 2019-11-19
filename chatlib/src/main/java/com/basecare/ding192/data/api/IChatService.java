@@ -23,6 +23,7 @@ import retrofit2.http.Query;
 
 public interface IChatService {
 
+
     /**
      * 加载聊天记录
      *

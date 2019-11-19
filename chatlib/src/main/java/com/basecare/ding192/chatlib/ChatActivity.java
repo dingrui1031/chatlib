@@ -699,8 +699,8 @@ public class ChatActivity extends BaseMvpActivity<ChatPresenter> implements Chat
             chatEntity.setReceiveAvatar(ChatConstant.CHAT_AVATAR_URL + authorId + "/image");
         }
         String description = attachment.optString("description");
-        if (StringUtils.isInteger(description)) {
-            chatEntity.setDuration(Integer.parseInt(attachment.optString("description")));
+        if (!StringUtils.isEmpty(description) && StringUtils.isInteger(description)) {
+            chatEntity.setDuration(Integer.parseInt(description));
         }
         chatEntity.setUrl(ChatConstant.CHAT_IMAGE_URL + attachment.optInt("id"));
         chatEntity.setDate(TimeUtils.millis2String(TimeUtils.string2MillisAdd8Hours(date)));

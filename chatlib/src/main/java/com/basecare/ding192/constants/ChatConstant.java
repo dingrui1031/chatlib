@@ -14,13 +14,13 @@ public class ChatConstant extends AppConfig {
     public static final int DEFAULT_MAX_AUDIO_RECORD_TIME_SECOND = 120;
 
     //语音存放位置
-    public static String AUDIO_SAVE_DIR = FileUtils.getDir("base360_doctor_audio");
+    public static String AUDIO_SAVE_DIR = FileUtils.getDir("bafy_doctor_audio");
 
     //聊天头像前缀
-    public static final String CHAT_AVATAR_URL = "https://test.basecare.cn/gc/image/res.partner/";
+    public static final String CHAT_AVATAR_URL = AppConfig.BASE_URL + "/gc/image/res.partner/";
 
     //聊天文件前缀
-    public static final String CHAT_IMAGE_URL = "https://test.basecare.cn/gy/content/";
+    public static final String CHAT_IMAGE_URL = AppConfig.BASE_URL + "/gy/content/";
 
     //聊天消息列表
     public static final String CHAT_HIS_LIST_URL = "/gy/message/fetch";

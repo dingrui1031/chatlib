@@ -18,6 +18,7 @@ import io.reactivex.Observable;
 interface ChatContract {
 
     interface View extends IView {
+
         //聊天记录
         void showData(String data);
 
@@ -25,7 +26,7 @@ interface ChatContract {
         void showSendMsgWithText(SendMsgBean bean);
 
         //发送报告
-        void showSendReportMsg(SendMsgBean bean,ReportDetailBean.ReportsBean reportsBean);
+        void showSendReportMsg(SendMsgBean bean, ReportDetailBean.ReportsBean reportsBean);
 
         //发送消息
         void showSendMsgWithAttachment(SendMsgBean sendMsgBean, UploadAttachmentBean bean);
@@ -35,6 +36,7 @@ interface ChatContract {
     }
 
     interface Model extends IModel {
+
         //聊天记录
         Observable<String> getData(int channelId, String uuid, int limit, int firstId);
 

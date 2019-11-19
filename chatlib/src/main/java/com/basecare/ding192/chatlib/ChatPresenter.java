@@ -23,6 +23,7 @@ public class ChatPresenter extends BasePresenter<ChatContract.Model, ChatContrac
         return new ChatModel();
     }
 
+
     /**
      * 加载聊天记录
      *
